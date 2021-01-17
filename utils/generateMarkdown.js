@@ -2,26 +2,40 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
-  ![Badge]('')
+  return "badge";
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
+function renderLicenseLink(license) {
+  if(license !== "None") {
+    return `* [License](#license)`
+} else {
+  return '';
+}
+}
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if(license !== "None") {
+    return `## License
+    
+  This project is licensed under the ${license} license.` 
+  } else {
+    return ' ';
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   let readmeDraft = 
 
-  `# ${answers.title}
-  
+  `# ${data.title}
+  ${renderLicenseBadge(data.license)}
+
   ## Project Description
   
-  ${answers.description}
+  ${data.description}
   
   ## Table of Contents
   
@@ -29,33 +43,31 @@ function generateMarkdown(data) {
   * [Usage](#usage)
   * [Contributing](#contributing)
   * [Tests](#tests)
-  * [License](#license)
+  ${renderLicenseLink(data.license)}
   * [Questions](#questions)
   
   ## Installation
   
-  ${answers.installation}
+  ${data.installation}
   
   ## Usage
   
-  ${answers.description}
+  ${data.description}
   
   ## Contributing
   
-  ${answers.usageInfo}
+  ${data.usageInfo}
   
   ## Tests
   
-  ${answers.test}
+  ${data.test}
   
-  ## License 
-  
-  ${answers.license}
+  ${renderLicenseSection(data.license)}
   
   ## Questions
   
-  // link to my github bio http://github.com - xxx
-  // email address with instructions on how to reach me with additional questions ${answers.email}
+  link to my github bio http://github.com/${data.github}
+  email address with instructions on how to reach me with additional questions ${data.email}
   
   `
 
