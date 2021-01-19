@@ -10,37 +10,31 @@ const questions = [
     type: 'input',
     name: 'title',
     message: 'What is your project title?',
-    default: false,
   },
   {
     type: 'input',
     name: 'description',
     message: 'Please write a short description of your project',
-    default: false,
   },
   {
     type: 'input',
     name: 'installation',
     message: 'Please enter installation instructions for your project',
-    default: false,
   },
   {
     type: 'input',
     name: 'usageInfo',
     message: 'Please enter usage information for your project',
-    default: false,
   },
   {
     type: 'input',
     name: 'contribution',
     message: 'Please enter contribution guidelines for your project',
-    default: false,
   },
   {
     type: 'input',
     name: 'test',
     message: 'Please enter test instructions for your project',
-    default: false,
   },
   {
     type: 'list',
@@ -52,13 +46,11 @@ const questions = [
     type: 'input',
     name: 'github',
     message: 'What is your Github username?',
-    default: false,
   },
   {
     type: 'input',
     name: 'email',
     message: 'What is your email address?',
-    default: false,
   },
 ];
 

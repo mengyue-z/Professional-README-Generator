@@ -1,8 +1,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-
-  return "badge";
+  var encodedLicense = encodeURIComponent(license)
+  return `![badge](https://img.shields.io/badge/License-${encodedLicense}-green)`
 }
 
 // TODO: Create a function that returns the license link
@@ -20,7 +20,7 @@ function renderLicenseSection(license) {
   if(license !== "None") {
     return `## License
     
-  This project is licensed under the ${license} license.` 
+  This project is licensed under the ${license}.` 
   } else {
     return ' ';
   }
@@ -66,8 +66,10 @@ function generateMarkdown(data) {
   
   ## Questions
   
-  link to my github bio http://github.com/${data.github}
-  email address with instructions on how to reach me with additional questions ${data.email}
+  If you have any questions, please don't hesitate to contact me at: ${data.email}.
+
+  My github bio http://github.com/${data.github}
+ 
   
   `
 
