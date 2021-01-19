@@ -68,7 +68,7 @@ function generateMarkdown(data) {
   
   If you have any questions, please don't hesitate to contact me at: ${data.email}.
 
-  My github bio http://github.com/${data.github}
+  My github bio: http://github.com/${data.github}
  
   
   `
